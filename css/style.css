@@ -1128,7 +1128,7 @@ input:focus,textarea:focus{
 
 }
 
-.contact-us-form  input:not(input[type='submit']), .contact-us-form textarea{
+.contact-us-form  input, .contact-us-form textarea{
   display: block;
   background-color: #292929;
   border:1px solid #3C3C3C;
@@ -1154,6 +1154,8 @@ input:focus,textarea:focus{
   border:0;
   margin:25px auto 10px 0;
   cursor: pointer;
+  border:0;
+  width:auto;
 }
 
 .contact-us-map{
