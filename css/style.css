@@ -373,7 +373,7 @@ input:focus,textarea:focus{
 
 .about-us h2 svg{
   display: block;
-  fill:#fff;
+  fill:#fff !important;
   margin:10px auto;
 }
 
@@ -1111,6 +1111,7 @@ input:focus,textarea:focus{
 .contact-us-form h3 svg{
   display: block;
   margin:10px  0 35px;
+  fill:var(--clr-main)
 }
 
 @media(max-width:767px){
