@@ -123,6 +123,26 @@ input:focus,textarea:focus{
   --section-padding-bottom: 60px;
 }
 
+
+/* =========================== SCROLLL TOP BUTTON ================== */
+.scroll-top-btn{
+  position: fixed;
+  bottom:10px;
+  background-color: var(--clr-main);
+  color:#fff;
+  padding:10px 15px;
+  border-radius: 10px;
+  font-size: 19px;
+  cursor: pointer;
+  z-index: 999;
+  right:-50px;
+  transition: var(--transtion-duration);
+}
+
+.scroll-top-btn.active{
+  right:15px;
+}
+
 /* ==================== NAVBAR ========================= */
 .navbar {
   min-height: 70px;
@@ -309,14 +329,16 @@ input:focus,textarea:focus{
 }
 
 
-
 .landing-image{
   flex: 1;
 }
 
-.landing-image img{
-
+@media(min-width:768px){
+  .landing-image img{
+    max-width:none
+  }
 }
+
 
 .landing-image .image-1{
   display: flex;
@@ -335,19 +357,13 @@ input:focus,textarea:focus{
   gap:22px;
 }
 
+
 @media (max-width:1199px){
   .landing-image .image-group{
     display: none;
   }
 }
 
-.landing-image .image-2{
-  
-}
-
-.landing-image .image-3{
-  
-}
 
 /* ============================= ABOUT US ========================= */
 .about-us{
@@ -1143,6 +1159,7 @@ input:focus,textarea:focus{
 .contact-us-form textarea{
   height: 330px;
   overflow-y: auto;
+  resize: none;
 }
 
 .contact-us-form input[type='submit']{
@@ -1253,7 +1270,7 @@ body{
 
 .footer-floor-1 .data span{
   color:#fff;
-  margin: 25px 0;
+  margin: 15px 0;
   font-size:17px;
   display: block;
 }
@@ -1315,11 +1332,21 @@ body{
 .footer-floor-2 .box ul{
   display: flex;
   flex-direction: column;
-  gap:18px;
-
 }
 
 .footer-floor-2 .box a{
   color:#CECECE;
   font-size: 17px;
+  display:block;
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+
+.footer-floor-2 .box a:hover{
+  transform: translateX(-10px);
+}
+
+.footer-floor-2 .box.social-media a:hover{
+  transform: translateX(0);
+  color: var(--clr-main);
 }

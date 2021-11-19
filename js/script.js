@@ -13,3 +13,23 @@ const training_slider = new Swiper(".training-slider", {
   slidesPerView: 2,
   freeMode:true
 });
+
+// scroll top btn
+const scroll_btn = document.querySelector(".scroll-top-btn");
+window.onscroll = function(){
+  if(this.scrollY > 1200){
+    scroll_btn.classList.add('active')
+  }else{
+    scroll_btn.classList.remove('active')
+  }
+  
+}
+
+scroll_btn.onclick = function(){
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  })
+}
+
+
