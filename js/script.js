@@ -6,6 +6,22 @@ navToggler.addEventListener("click", (_) => {
   navMenu.classList.toggle("active");
 });
 
+// Animation landing text
+let txt = "إتحاد الإمارات للكانوي والرافتنج";
+let ele1 = document.querySelector(".landing-info > h1");
+let ele2 = document.querySelector(".landing-info h1 span");
+let txtNum = 0;
+let txtInterval = setInterval(() => {
+  if(txtNum < 15){
+    ele2.textContent += txt[txtNum];
+  }else{
+    ele1.append(txt[txtNum]) ;
+  }
+  if(txtNum == txt.length - 1) clearInterval(txtInterval);
+  txtNum++;
+}, 80);
+
+
 // training slider
 const training_slider = new Swiper(".training-slider", {
   speed:1000,
