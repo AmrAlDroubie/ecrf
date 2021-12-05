@@ -32,4 +32,11 @@ scroll_btn.onclick = function(){
   })
 }
 
-
+// partners slider
+const swiper = new Swiper('.partner-slider', {
+  navigation:{
+    nextEl:".partner-slider-next",
+    prevEl:".partner-slider-prev"
+  },
+  loop:true
+});
