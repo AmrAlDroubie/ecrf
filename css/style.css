@@ -1093,6 +1093,12 @@ textarea:focus {
   overflow: hidden;
 }
 
+@media(max-width:767px){
+  .partners{
+    background-color: var(--clr-dark);
+  }
+}
+
 .partners-circle{
   bottom:auto;
   left: auto;
@@ -1100,18 +1106,21 @@ textarea:focus {
   right:-25px;
 }
 
-.partners::before {
-  content: "";
-  position: absolute;
-  top: -200px;
-  left: 0;
-  background-color: var(--clr-dark);
-  width: 100%;
-  height: calc(100% + 50px);
-  z-index: -1;
-  transform: skewY(-4deg);
-  border-bottom-right-radius: 190px;
+@media(min-width:768px){
+  .partners::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    left: 0;
+    background-color: var(--clr-dark);
+    width: 100%;
+    height: calc(100% + 50px);
+    z-index: -1;
+    transform: skewY(-4deg);
+    border-bottom-right-radius: 190px;
+  }
 }
+
 
 .partners h2 {
   font-size: 35px;
