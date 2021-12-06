@@ -24,10 +24,14 @@ let txtInterval = setInterval(() => {
 
 // training slider
 const training_slider = new Swiper(".training-slider", {
-  speed:1000,
+  breakpoints:{
+    768:{
+        speed:1000,
+        slidesPerView: 2,
+        freeMode:true,
+    }
+  },
   spaceBetween:10,
-  slidesPerView: 2,
-  freeMode:true
 });
 
 // scroll top btn
