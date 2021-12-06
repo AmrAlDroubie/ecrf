@@ -144,7 +144,11 @@ textarea:focus {
 /* ==================== NAVBAR ========================= */
 .navbar {
   min-height: 70px;
-  margin-top: 40px;
+}
+@media(min-width:768px){
+  .navbar{
+    margin-top: 40px;
+  }
 }
 
 .navbar-logo {
@@ -154,6 +158,13 @@ textarea:focus {
 .navbar-toggler {
   display: none;
   cursor: pointer;
+  top:40px;
+}
+
+@media(min-width:768px){
+  .navbar-toggler{
+    top: 74px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -163,7 +174,6 @@ textarea:focus {
     display: block;
     position: absolute;
     left: 27px;
-    top: 74px;
   }
 }
 
@@ -181,8 +191,9 @@ textarea:focus {
     top: -100%;
     transition: var(--transtion-duration);
     z-index: 333;
-    box-shadow: 0 5px 25px rgb(128, 128, 128);
     padding:12px 0;
+    box-shadow: 10px;
+    box-shadow: 5px 5px 5px #00000038;
   }
   .navbar-collapse.active {
     top: 100px;
