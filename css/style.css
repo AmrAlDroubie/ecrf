@@ -1109,6 +1109,7 @@ textarea:focus {
   color: #fff;
   padding: 130px 0;
   position: relative;
+  overflow:hidden
 }
 
 @media(max-width:767px){
